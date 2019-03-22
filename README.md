@@ -1,6 +1,41 @@
-# Emergency Recipe (Front End)
+Emergency Recipe (Front End)
+
+## Description
 
 Emergency Recipe flips recipe search on it's head – allowing users to search for recipes by the ingredients they already have in hand.
+
+# Problem:
+
+
+# Solution:
+
+## List of Features
+
+Users can:
+
+- perform a search for recipes using key ingredients
+- read a list of matching recipe results
+- click on the individual recipes of interest
+- read through the recipe instructions
+- edit recipes
+- add new recipes
+- add, read and delete comments on recipes
+
+## List of Technologies
+
+Emergency Recipe is a MERN application.
+
+On the Front End dependencies include:
+
+- axios
+- react
+- react-animation
+- react-dom
+- react-materialize
+- react-router-dom
+- react-scripts
+
+On the Back End Dependencies include:
 
 ## Getting Started
 
@@ -12,7 +47,7 @@ To tinker under the hood, feel free to fork and clone this repository.
 
 ### Prerequisites
 
-We've worked to keep this project fairly light on the dependency front.  However, a few packages required.
+We've worked to keep this project fairly light on the dependency front. However, a few packages required.
 
 ```
 npm install react react-dom react-materialize
@@ -49,10 +84,10 @@ TK
 
 ## Authors
 
-* **Liz Davidson** - *Back End & Authentication * - [GitHub]([https://github.com/PurpleBooth](https://github.com/ldavidson45))
-* **Yoshi Maisami** - *Back End & Senior Dev Outreach* - [GitHub](https://github.com/yoshimaisami)
-* **Jasmin Vargas** - *Front End & Forms* - [GitHub](https://github.com/jasvr)
-* **Paul Blake** - *Front End & Design* - [Portfolio](https://pnblake.com) - [GitHub](https://github.com/pnblake)
+- **Liz Davidson** - _Back End & Authentication _ - [GitHub](<[https://github.com/PurpleBooth](https://github.com/ldavidson45)>)
+- **Yoshi Maisami** - _Back End & Senior Dev Outreach_ - [GitHub](https://github.com/yoshimaisami)
+- **Jasmin Vargas** - _Front End & Forms_ - [GitHub](https://github.com/jasvr)
+- **Paul Blake** - _Front End & Design_ - [Portfolio](https://pnblake.com) - [GitHub](https://github.com/pnblake)
 
 ## License
 
@@ -60,5 +95,6 @@ TK
 
 ## Acknowledgments
 
-* H/T Tom Pawlak and his blog for his method of tokenizing strings in Javascript, which helped build our ingredients tags. [Read more here.](https://blog.abelotech.com/posts/split-string-into-tokens-javascript/)
-* H/T to 'Surreal Dreams' on StackOverflow for inspiring our delayed search with his JQuery-esque answer on [this thread](https://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up).
+- H/T to Tom Pawlak and his blog for his method of tokenizing strings in Javascript, which helped build our ingredients tags. [Read more here.](https://blog.abelotech.com/posts/split-string-into-tokens-javascript/)
+- H/T to 'Surreal Dreams' on StackOverflow for inspiring our delayed search with his JQuery-esque answer on [this thread](https://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up).
+- H/T to Changhui Xu and his [blog post on removing duplicate objects from an array](https://codeburst.io/javascript-array-distinct-5edc93501dc4).
