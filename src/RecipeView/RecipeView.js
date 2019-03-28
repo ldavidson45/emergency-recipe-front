@@ -59,7 +59,7 @@ class RecipeView extends Component {
               <Row>
                 <h5>Comments</h5>
                 <CommentList {...this.state} {...this.props} />
-                <CommentForm />
+                <CommentForm {...this.state} {...this.props} />
               </Row>
             </CardPanel>
           </Col>
