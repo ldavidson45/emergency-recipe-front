@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, CardPanel, Button } from "react-materialize";
+import { CollectionItem } from "react-materialize";
 
 class CommentItem extends Component {
   constructor(props) {
@@ -29,19 +29,10 @@ class CommentItem extends Component {
 
   render() {
     return (
-      <div>
-        <Row>
-          <Col s={12} m={12}>
-            <CardPanel className="pink white-text">
-              <span>{this.props.comment.content}</span>
-              <br />
-              <Button waves="light" onClick={this.handleDelete}>
-                Delete
-              </Button>
-            </CardPanel>
-          </Col>
-        </Row>
-      </div>
+      <CollectionItem>
+        <p>{this.props.comment.content}</p>
+        <p>-{this.props.comment.name}</p>
+      </CollectionItem>
     );
   }
 }

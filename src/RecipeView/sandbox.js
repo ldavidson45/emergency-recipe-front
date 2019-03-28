@@ -1,3 +1,5 @@
+// Recipe View
+
 <div>
   <Card
     className="recipe-view-card"
@@ -65,4 +67,39 @@
       <Comments {...this.state} {...this.props} getData={this.getData} />
     </Row>
   </Card>
+</div>;
+
+// Comment List
+
+if (this.props.recipe.comments) {
+  commentItemComponents = comments.map((comment, id) => {
+    return <CommentItem comment={comment} key={id} {...this.props} />;
+  });
+}
+
+return (
+  <div>
+    <Col s={12} m={7}>
+      <CardPanel className="teal lighten-4 black-text">
+        <h4>User Comments</h4>
+        <div className="commentContainer">{commentItemComponents}</div>
+      </CardPanel>
+    </Col>
+  </div>
+);
+
+//   comment Item
+
+<div>
+  <Row>
+    <Col s={12} m={12}>
+      <CardPanel className="pink white-text">
+        <span>{this.props.comment.content}</span>
+        <br />
+        <Button waves="light" onClick={this.handleDelete}>
+          Delete
+        </Button>
+      </CardPanel>
+    </Col>
+  </Row>
 </div>;
