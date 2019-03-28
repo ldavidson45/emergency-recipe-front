@@ -4,7 +4,7 @@ import Home from "./Home";
 import Title from "./Title.js";
 import { Container } from "react-materialize";
 import "./App.css";
-import RecipeView from "./RecipeView.js";
+import RecipeView from "./RecipeView/RecipeView.js";
 import RecipeFormView from "./RecipeFormView";
 import Auth from "./Auth";
 import axios from "axios";
