@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import CommentList from "../CommentComponents/CommentList";
+import CommentForm from "../CommentComponents/CommentForm";
 import "./RecipeView.css";
 import { Col, CardPanel, Row } from "react-materialize";
 
@@ -58,7 +59,7 @@ class RecipeView extends Component {
               <Row>
                 <h5>Comments</h5>
                 <CommentList {...this.state} {...this.props} />
-                {/* commentInput */}
+                <CommentForm />
               </Row>
             </CardPanel>
           </Col>

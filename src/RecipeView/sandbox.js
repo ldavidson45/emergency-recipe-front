@@ -103,3 +103,32 @@ return (
     </Col>
   </Row>
 </div>;
+
+// Comment Form
+
+<div className="com-outer-div">
+  <div>Let us know what you think!</div>
+  <Row className="user-form-input">
+    <div className="comment-container">
+      <Input
+        s={12}
+        m={12}
+        l={12}
+        label="Your Comment"
+        name="content"
+        // type="textarea"
+        onChange={this.props.onInputChange}
+      />
+    </div>
+    <div>
+      <Button
+        onClick={this.props.onSubmit}
+        waves="light"
+        node="a"
+        href="http://www.google.com"
+      >
+        Comment
+      </Button>
+    </div>
+  </Row>
+</div>;
