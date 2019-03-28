@@ -1,10 +1,23 @@
 import React, { Component } from "react";
-import { Textarea } from "react-materialize";
+import { Button } from "react-materialize";
 import "./CommentForm.css";
 
 class CommentForm extends Component {
   render() {
-    return <p>Leave a Comment</p>;
+    return (
+      <form>
+        <textarea className="comment-input" rows="4" cols="40" />
+        <Button
+          className="submit-button"
+          node="a"
+          waves="light"
+          small
+          style={{ marginRight: "5px" }}
+        >
+          Submit
+        </Button>
+      </form>
+    );
   }
 }
 export default CommentForm;
