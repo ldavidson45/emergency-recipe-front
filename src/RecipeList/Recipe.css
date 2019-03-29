@@ -19,3 +19,16 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.recipe-view-container {
+  margin: 20px;
+}
+
+.image-ingredients-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ingredients-container {
+  padding-left: 50px;
+}
