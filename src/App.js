@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import RecipeCard from "./RecipeList/RecipeCard";
 import RecipeList from "./RecipeList/RecipeList";
 import RecipePageView from "./RecipePage/RecipePageView";
 

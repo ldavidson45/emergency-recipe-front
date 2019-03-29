@@ -31,7 +31,7 @@ const recipes = [
 class RecipeList extends Component {
   render() {
     let recipelist = recipes.map(recipe => {
-      return <RecipeCard {...recipe} />;
+      return <RecipeCard key={recipe._id} {...recipe} />;
     });
 
     return <div className="recipe-list">{recipelist}</div>;
