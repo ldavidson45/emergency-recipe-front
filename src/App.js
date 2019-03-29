@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import RecipeCard from "./RecipeList/RecipeCard";
 import RecipeList from "./RecipeList/RecipeList";
 import RecipePageView from "./RecipePage/RecipePageView";
@@ -8,8 +8,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <RecipeList />
-        <Route path="recipe/:id" component={RecipePageView} />
+        <Switch>
+          <Route path="/" exact component={RecipeList} />
+          <Route path="recipe/:id" component={RecipePageView} />
+        </Switch>
       </div>
     );
   }

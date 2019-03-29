@@ -5,7 +5,7 @@ class RecipePageView extends Component {
     return (
       <div>
         <h1>Title</h1>
-        <img src="/ {recipe._id}" />
+        <img src="/{recipe._id}" />
         <h3>Ingredients</h3>
         <ul>
           <li>Ingredient 1</li>
