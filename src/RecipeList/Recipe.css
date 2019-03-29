@@ -1,21 +1,21 @@
 .recipe-card {
-  padding: 10px;
   box-shadow: 2px 4px 10px #888888;
-  width: 300px;
-  position: relative;
   margin: 10px;
-  break-inside: avoid;
+  padding: 10px;
+  position: inherit;
 }
 
 .recipe-thumbnail {
-  height: auto;
-  width: 280px;
+  height: 400px;
+  width: auto;
 }
 
 .recipe-list {
+  padding: 10px;
+  max-width: 100vw;
+  margin: 0 auto;
   display: flex;
-  flex-flow: column wrap; /* Shorthand – you could use ‘flex-direction: column’ and ‘flex-wrap: wrap’ instead */
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 970px;
 }

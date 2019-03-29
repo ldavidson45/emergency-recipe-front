@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ViewRecipeButton from "./ViewRecipeButton";
-
 import { Col, Row, Card, CardTitle, Modal } from "react-materialize";
+import { Link } from "react-router-dom";
 
 function RecipeCard(recipe) {
   return (
@@ -23,6 +23,7 @@ function RecipeCard(recipe) {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum
       </p>
+      <Link to={"/" + recipe._id}>View</Link>
     </Modal>
   );
 }
