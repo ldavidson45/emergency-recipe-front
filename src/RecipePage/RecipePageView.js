@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RecipeImage from "../RecipeList/RecipeImage";
 import CommentList from "../CommentComponents/CommentList";
+import CommentInput from "../CommentComponents/CommentInput";
 
 class RecipePageView extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class RecipePageView extends Component {
           <h3>Directions</h3>
           <p>These are the directions</p>
         </section>
+        <CommentInput />
         <CommentList {...recipe} />
       </main>
     );
