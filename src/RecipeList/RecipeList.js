@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../RecipeList/Recipe.css";
 import RecipeCard from "./RecipeCard";
 
 const recipes = [
