@@ -1,16 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import CommentItem from "./CommentItem";
 
 function CommentList(recipe) {
   const commentsArray = recipe.comments;
-  let commentItems = commentsArray.map(comment => {
-    return (
-      <div>
-        <p>
-          <span>{comment.name}</span>-{comment.content}
-        </p>
-      </div>
-    );
-  });
+  let commentItems = [];
+  if (commentsArray) {
+    commentItems = commentsArray.map(comment => {
+      return <CommentItem {...comment} />;
+    });
+  }
+
   return <div>{commentItems}</div>;
 }
 export default CommentList;
