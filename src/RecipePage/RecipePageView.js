@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import RecipeImage from "../RecipeList/RecipeImage";
 import CommentList from "../CommentComponents/CommentList";
 import CommentInput from "../CommentComponents/CommentInput";
+import IngredientsList from "./IngredientsList";
+import RecipeDirections from "./RecipeDirections";
 
 class RecipePageView extends Component {
   constructor(props) {
@@ -18,18 +20,9 @@ class RecipePageView extends Component {
         <h1>{recipe.title}</h1>
         <section className="image-ingredients-container">
           <RecipeImage {...recipe} />
-          <div className="ingredients-container">
-            <h3>Ingredients</h3>
-            <ul>
-              <li>Ingredient 1</li>
-              <li>Ingredient 2</li>
-            </ul>
-          </div>
+          <IngredientsList {...recipe} />
         </section>
-        <section>
-          <h3>Directions</h3>
-          <p>These are the directions</p>
-        </section>
+        <RecipeDirections {...recipe} />
         <CommentInput />
         <CommentList {...recipe} />
       </main>

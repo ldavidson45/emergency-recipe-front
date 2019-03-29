@@ -1,6 +1,5 @@
 import React from "react";
-import ViewRecipeButton from "./ViewRecipeButton";
-import { Col, Row, Card, CardTitle, Modal } from "react-materialize";
+import { Modal } from "react-materialize";
 import { Link } from "react-router-dom";
 import RecipeImage from "./RecipeImage";
 
