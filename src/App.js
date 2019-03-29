@@ -10,7 +10,12 @@ class App extends Component {
       <div>
         <Switch>
           <Route path="/" exact component={RecipeList} />
-          <Route path="recipe/:id" component={RecipePageView} />
+          <Route
+            path="/recipe/:id"
+            render={props => {
+              return <RecipePageView {...props} />;
+            }}
+          />
         </Switch>
       </div>
     );
