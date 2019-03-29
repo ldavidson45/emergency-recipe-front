@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import ViewRecipeButton from "./ViewRecipeButton";
+import { Modal, Button } from "react-materialize";
+import "./Recipe.css";
 
-import { Col, Row, Card, CardTitle, Modal } from "react-materialize";
-
-function RecipeCard(recipe) {
+function ViewRecipeButton(recipe) {
   return (
     <Modal
       header={recipe.title}
       trigger={
-        <article className="recipe-card">
-          <h5>{recipe.title}</h5>
-          <img className="recipe-thumbnail" src={recipe.picture} />
-        </article>
+        <Button flat waves="light">
+          View
+        </Button>
       }
     >
       <p>
@@ -27,4 +25,4 @@ function RecipeCard(recipe) {
   );
 }
 
-export default RecipeCard;
+export default ViewRecipeButton;

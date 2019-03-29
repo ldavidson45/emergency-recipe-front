@@ -1,4 +1,21 @@
-.thumbnail {
-  width: 10vw;
-  /* height: auto; */
+.recipe-card {
+  padding: 10px;
+  box-shadow: 2px 4px 10px #888888;
+  width: 300px;
+  position: relative;
+  margin: 10px;
+  break-inside: avoid;
+}
+
+.recipe-thumbnail {
+  height: auto;
+  width: 280px;
+}
+
+.recipe-list {
+  display: flex;
+  flex-flow: column wrap; /* Shorthand – you could use ‘flex-direction: column’ and ‘flex-wrap: wrap’ instead */
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 970px;
 }
