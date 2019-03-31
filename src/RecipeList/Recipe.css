@@ -32,3 +32,12 @@
 .ingredients-container {
   padding-left: 50px;
 }
+
+.comments-list {
+  background: pink;
+}
+
+.comment-author {
+  color: blue;
+  font-weight: bold;
+}

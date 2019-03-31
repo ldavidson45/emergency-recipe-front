@@ -10,6 +10,6 @@ function CommentList(recipe) {
     });
   }
 
-  return <div>{commentItems}</div>;
+  return <div className="comments-list">{commentItems}</div>;
 }
 export default CommentList;

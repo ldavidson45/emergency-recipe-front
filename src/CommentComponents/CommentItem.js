@@ -4,7 +4,8 @@ function CommentItem(comment) {
   return (
     <div>
       <p>
-        <span>{comment.name}</span>-{comment.content}
+        <span className="comment-author">{comment.name}</span> -{" "}
+        {comment.content}
       </p>
     </div>
   );
