@@ -16,7 +16,7 @@ class RecipePageView extends Component {
   render() {
     const recipe = this.state.recipe;
     return (
-      <main className="recipe-view-container">
+      <main className="recipe-container">
         <h1>{recipe.title}</h1>
         <section className="image-ingredients-container">
           <RecipeImage {...recipe} />

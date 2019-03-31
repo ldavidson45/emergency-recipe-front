@@ -6,7 +6,7 @@
 }
 
 .recipe-thumbnail {
-  height: 400px;
+  max-height: 400px;
   width: auto;
 }
 
@@ -20,15 +20,20 @@
   align-items: flex-start;
 }
 
-.recipe-view-container {
+.recipe-container {
   margin: 20px;
+  flex-basis: 100px;
+  flex-grow: 1;
 }
 
 .image-ingredients-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.ingredients-container {
-  padding-left: 50px;
+.recipe-section-heading {
+  border-bottom: solid 1px #888888;
+  padding: 5px;
+  margin: 0;
 }
