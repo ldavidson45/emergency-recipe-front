@@ -4,7 +4,7 @@ import { Icon, Button } from "react-materialize";
 
 function CommentItem(comment) {
   return (
-    <div>
+    <div key={comment._id}>
       <p className="comment-item-container">
         <Icon className="user-icon" tiny>
           perm_identity

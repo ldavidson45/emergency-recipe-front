@@ -3,14 +3,15 @@ import { Route, Switch } from "react-router-dom";
 import RecipeList from "./RecipeList/RecipeList";
 import RecipePageView from "./RecipePage/RecipePageView";
 import Home from "./Home/Home.js";
+import NavBar from "./NavBar/NavBar";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <NavBar />
         <Switch>
-          <Route path="/" exact component={RecipeList} />
+          <Route path="/" exact component={Home} />
           <Route
             path="/recipe/:id"
             render={props => {
