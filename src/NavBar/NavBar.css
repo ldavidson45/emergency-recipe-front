@@ -1,0 +1,12 @@
+.nav-bar {
+  background-color: green;
+  height: 50px;
+}
+
+.nav-link {
+  color: white;
+  margin: 0 5px 0 auto;
+  display: block;
+  text-align: right;
+  height: 100%;
+}
