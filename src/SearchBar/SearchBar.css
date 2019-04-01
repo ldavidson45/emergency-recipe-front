@@ -1,0 +1,9 @@
+.search-input {
+  width: 500px;
+  border: solid red;
+}
+
+.search-container {
+  width: 500px;
+  margin: auto;
+}
