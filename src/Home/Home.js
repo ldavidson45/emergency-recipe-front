@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "../NavBar/NavBar";
 import SearchBar from "../SearchBar/SearchBar";
 import RecipeList from "../RecipeList/RecipeList";
 import axios from "axios";
+import "./Home.css";
 
 const rootAPI = "https://emergency-recipe.herokuapp.com/";
 
@@ -28,6 +28,7 @@ class Home extends Component {
   render() {
     return (
       <main>
+        <h1 className="home-title">Emergency Recipe</h1>
         <SearchBar handleSearch={this.handleSearch} />
         <RecipeList {...this.state} />
       </main>

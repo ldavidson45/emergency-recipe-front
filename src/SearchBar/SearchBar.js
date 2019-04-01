@@ -59,7 +59,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-container">
-        <p>Search By Ingredients</p>
+        <p className="search-title">Search By Ingredients</p>
         <SearchChips {...this.state} handleDelete={this.handleDelete} />
         <div className="search-form">
           <input

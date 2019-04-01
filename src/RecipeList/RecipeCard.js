@@ -2,6 +2,7 @@ import React from "react";
 import { Modal } from "react-materialize";
 import { Link } from "react-router-dom";
 import RecipeImage from "./RecipeImage";
+import "./Recipe.css";
 
 function RecipeCard(recipe) {
   return (
@@ -10,6 +11,7 @@ function RecipeCard(recipe) {
       trigger={
         <article className="recipe-card">
           <h5 className="recipe-title">{recipe.title}</h5>
+
           <RecipeImage {...recipe} />
         </article>
       }
