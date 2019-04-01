@@ -6,6 +6,23 @@ import NavBar from "./NavBar/NavBar";
 import LoginPage from "./Login_Signup/LoginPage";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      isLoggedIn: false
+    };
+  }
+
+  handleLogin(event, username, pw) {
+    event.preventDefault();
+    console.log("login");
+  }
+
+  handleSignup(event) {
+    event.preventDefault();
+    console.log("Signup");
+  }
   render() {
     return (
       <div>
@@ -18,7 +35,19 @@ class App extends Component {
               return <RecipePageView {...props} />;
             }}
           />
-          <Route path="/login" component={LoginPage} />
+          <Route
+            path="/login"
+            render={props => {
+              return (
+                <LoginPage
+                  {...this.state}
+                  {...props}
+                  handleLogin={this.handleLogin}
+                  handleSignup={this.handleSignup}
+                />
+              );
+            }}
+          />
         </Switch>
       </div>
     );

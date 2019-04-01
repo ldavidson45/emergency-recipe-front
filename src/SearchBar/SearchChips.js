@@ -13,8 +13,6 @@ class SearchChips extends Component {
         </Chip>
       );
     });
-    console.log(terms);
-
     return <div>{terms}</div>;
   }
 }
