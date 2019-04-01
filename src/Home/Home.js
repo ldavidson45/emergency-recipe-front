@@ -18,10 +18,11 @@ class Home extends Component {
   handleSearch(event, array) {
     // call api search
     event.preventDefault();
-    console.log(array);
-    // axios.post(rootAPI + "api/recipe", array).then(res => {
-    //   console.log(res);
-    // });
+    axios.post(rootAPI + "api/recipe", array).then(res => {
+      this.setState({
+        searchResults: res.data
+      });
+    });
   }
 
   render() {

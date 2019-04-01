@@ -52,8 +52,7 @@ class SearchBar extends Component {
 
   triggerSearch(event) {
     event.preventDefault();
-    console.log("click");
-    // this.props.handleSearch(event, this.state.searchArray);
+    this.props.handleSearch(event, this.state.searchArray);
   }
 
   render() {
