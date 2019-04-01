@@ -37,9 +37,9 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="login-container">
-        <form className="login-form">
+        <form className="login-form" onSubmit={this.props.handleLogin}>
           <h4 style={titleStyle}>Emergency Recipe</h4>
-          <label for="username">
+          <label>
             USERNAME
             <input
               onChange={this.handleInputChange}
@@ -48,7 +48,7 @@ class LoginPage extends Component {
               style={inputStyle}
             />
           </label>
-          <label for="password">
+          <label>
             PASSWORD
             <input
               onChange={this.handleInputChange}
@@ -57,7 +57,7 @@ class LoginPage extends Component {
               type="password"
             />
           </label>
-          <button onClick={this.props.handleLogin} className="login-button">
+          <button type="submit" className="login-button">
             Log In
           </button>
           <button onClick={this.props.handleSignup} className="login-button">

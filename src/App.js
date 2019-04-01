@@ -4,6 +4,9 @@ import RecipePageView from "./RecipePage/RecipePageView";
 import Home from "./Home/Home.js";
 import NavBar from "./NavBar/NavBar";
 import LoginPage from "./Login_Signup/LoginPage";
+import axios from "axios";
+
+const rootAPI = "https://emergency-recipe.herokuapp.com/";
 
 class App extends Component {
   constructor(props) {
@@ -12,16 +15,39 @@ class App extends Component {
       username: "",
       isLoggedIn: false
     };
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
 
-  handleLogin(event, username, pw) {
+  handleLogin(event) {
     event.preventDefault();
+    axios
+      .post(rootAPI + "users/login", {
+        username: event.target.username.value,
+        password: event.target.password.value
+      })
+      .then(res => {
+        localStorage.token = res.data.token;
+        this.setState({ isLoggedIn: true });
+      })
+      .catch(err => console.log(err));
+
     console.log("login");
   }
 
   handleSignup(event) {
     event.preventDefault();
-    console.log("Signup");
+    axios
+      .post(rootAPI + "users/login", {
+        username: event.target.username.value,
+        password: event.target.password.value
+      })
+      .then(response => {
+        localStorage.token = response.data.token;
+        this.setState({ isLoggedIn: true });
+        this.setState({ password: "" });
+      })
+      .catch(err => console.log(err));
   }
   render() {
     return (
