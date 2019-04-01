@@ -1,12 +1,13 @@
 .nav-bar {
-  background-color: green;
+  background-color: #1f3044;
   height: 50px;
 }
 
 .nav-link {
   color: white;
   margin: 0 5px 0 auto;
-  display: block;
   text-align: right;
-  height: 100%;
+  font-size: 18px;
+  line-height: 50px;
+  margin: 0px 15px;
 }

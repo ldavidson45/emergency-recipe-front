@@ -7,7 +7,7 @@ class NavBar extends Component {
     return (
       <div className="nav-bar">
         <Link className="nav-link" to="/login">
-          Log In
+          <span>Log In</span>
         </Link>
       </div>
     );
