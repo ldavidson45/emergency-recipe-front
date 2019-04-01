@@ -29,6 +29,10 @@ const recipes = [
 ];
 
 class RecipeList extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     let recipelist = recipes.map(recipe => {
       return <RecipeCard key={recipe._id} {...recipe} />;

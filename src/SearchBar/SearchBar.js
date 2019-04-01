@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SearchBar.css";
 import SearchChips from "./SearchChips";
-import { Icon } from "react-materialize";
+import { Button } from "react-materialize";
 
 const searchBarStyle = {
   border: "solid 1px black",
@@ -22,11 +22,12 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       searchArray: [],
-      ingredient: ""
+      ingredient: "",
+      searchResults: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.triggerSearch = this.triggerSearch.bind(this);
   }
 
   handleInputChange(event) {
@@ -49,13 +50,10 @@ class SearchBar extends Component {
     }
   }
 
-  handleDelete(event) {
-    console.log("deleted");
-  }
-
-  handleSearch(event) {
-    // call api search
-    console.log(this.state.searchArray);
+  triggerSearch(event) {
+    event.preventDefault();
+    console.log("click");
+    // this.props.handleSearch(event, this.state.searchArray);
   }
 
   render() {
@@ -70,9 +68,14 @@ class SearchBar extends Component {
             className="search-input"
             style={searchBarStyle}
           />
-          <Icon className="icon" onClick={this.handleSearch}>
-            search
-          </Icon>
+          <Button
+            floating
+            small
+            onClick={this.triggerSearch}
+            className="search-button"
+            waves="light"
+            icon="search"
+          />
         </div>
       </div>
     );
