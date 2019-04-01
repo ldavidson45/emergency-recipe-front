@@ -28,7 +28,10 @@ class App extends Component {
       })
       .then(res => {
         localStorage.token = res.data.token;
-        this.setState({ isLoggedIn: true });
+        this.setState({
+          isLoggedIn: true,
+          username: event.target.username.value
+        });
       })
       .catch(err => console.log(err));
 
@@ -44,8 +47,10 @@ class App extends Component {
       })
       .then(response => {
         localStorage.token = response.data.token;
-        this.setState({ isLoggedIn: true });
-        this.setState({ password: "" });
+        this.setState({
+          isLoggedIn: true,
+          username: event.target.username.value
+        });
       })
       .catch(err => console.log(err));
   }
