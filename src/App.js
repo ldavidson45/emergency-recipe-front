@@ -18,41 +18,52 @@ class App extends Component {
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
   }
+  componentDidMount() {
+    if (localStorage.token) {
+      this.setState({
+        isLoggedIn: true
+      });
+    } else {
+      this.setState({
+        isLoggedIn: false
+      });
+    }
+  }
 
-  handleLogin(event) {
+  handleLogin(event, un, pw) {
     event.preventDefault();
     axios
       .post(rootAPI + "users/login", {
-        username: event.target.username.value,
-        password: event.target.password.value
+        username: un,
+        password: pw
       })
       .then(res => {
         localStorage.token = res.data.token;
         this.setState({
           isLoggedIn: true,
-          username: event.target.username.value
+          username: un
         });
       })
-      .catch(err => console.log(err));
-
+      .catch(err => alert(err));
+    console.log(this.props);
     console.log("login");
   }
 
-  handleSignup(event) {
+  handleSignup(event, un, pw) {
     event.preventDefault();
     axios
-      .post(rootAPI + "users/login", {
-        username: event.target.username.value,
-        password: event.target.password.value
+      .post(rootAPI + "users/signup", {
+        username: un,
+        password: pw
       })
-      .then(response => {
-        localStorage.token = response.data.token;
+      .then(res => {
+        localStorage.token = res.data.token;
         this.setState({
           isLoggedIn: true,
-          username: event.target.username.value
+          username: un
         });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   }
   render() {
     return (

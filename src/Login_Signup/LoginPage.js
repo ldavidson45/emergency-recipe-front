@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Login.css";
+import LoginButton from "./LoginButton";
+import SignupButton from "./SignupButton";
 
 const inputStyle = {
   border: "solid 1px white",
@@ -37,7 +39,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="login-container">
-        <form className="login-form" onSubmit={this.props.handleLogin}>
+        <form className="login-form">
           <h4 style={titleStyle}>Emergency Recipe</h4>
           <label>
             USERNAME
@@ -57,12 +59,8 @@ class LoginPage extends Component {
               type="password"
             />
           </label>
-          <button type="submit" className="login-button">
-            Log In
-          </button>
-          <button onClick={this.props.handleSignup} className="login-button">
-            Sign Up
-          </button>
+          <LoginButton {...this.props} {...this.state} />
+          <SignupButton {...this.props} {...this.state} />
         </form>
       </div>
     );
