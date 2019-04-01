@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./SearchBar.css";
 import SearchChips from "./SearchChips";
-import { Chip } from "react-materialize";
 
 class SearchBar extends Component {
   constructor(props) {
