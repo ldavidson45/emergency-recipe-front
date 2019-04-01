@@ -6,8 +6,10 @@
 }
 
 .recipe-thumbnail {
-  max-height: 400px;
+  max-height: 200px;
   width: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .recipe-list {

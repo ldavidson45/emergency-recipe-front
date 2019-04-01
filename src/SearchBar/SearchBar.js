@@ -47,6 +47,7 @@ class SearchBar extends Component {
       this.setState({
         searchArray: array
       });
+      this.triggerSearch(event);
     }
   }
 
@@ -66,14 +67,6 @@ class SearchBar extends Component {
             onKeyDown={this.handleSubmit}
             className="search-input"
             style={searchBarStyle}
-          />
-          <Button
-            floating
-            small
-            onClick={this.triggerSearch}
-            className="search-button"
-            waves="light"
-            icon="search"
           />
         </div>
       </div>

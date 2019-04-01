@@ -9,20 +9,12 @@ function RecipeCard(recipe) {
       header={recipe.title}
       trigger={
         <article className="recipe-card">
-          <h5>{recipe.title}</h5>
+          <h5 className="recipe-title">{recipe.title}</h5>
           <RecipeImage {...recipe} />
         </article>
       }
     >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
+      <p>{recipe.instructions}</p>
       <Link
         to={{
           pathname: `/recipe/${recipe._id}`,
