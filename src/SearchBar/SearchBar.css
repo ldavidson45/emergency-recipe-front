@@ -1,9 +1,21 @@
-.search-input {
-  width: 500px;
-  border: solid red;
-}
-
 .search-container {
   width: 500px;
   margin: auto;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  color: #fb9039;
+  border-radius: 50px;
+  padding: 10px;
+
+  margin: 0 0 20px 10px;
+}
+
+.icon:hover {
+  background: #1f3044;
 }
