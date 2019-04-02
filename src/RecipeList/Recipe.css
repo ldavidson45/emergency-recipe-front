@@ -55,3 +55,8 @@
   grid-template-columns: 30% 30% 30%;
   margin-top: 10px;
 }
+
+.directions-text {
+  white-space: pre-line;
+  white-space: pre-wrap;
+}
