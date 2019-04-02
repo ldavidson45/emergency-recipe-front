@@ -4,10 +4,6 @@ Emergency Recipe (Front End)
 
 Emergency Recipe flips recipe search on it's head – allowing users to search for recipes by the ingredients they already have in hand.
 
-# Problem:
-
-# Solution:
-
 ## List of Features
 
 Users can:
@@ -16,8 +12,6 @@ Users can:
 - read a list of matching recipe results
 - click on the individual recipes of interest
 - read through the recipe instructions
-- edit recipes
-- add new recipes
 - add, read and delete comments on recipes
 
 ## List of Technologies
@@ -33,8 +27,6 @@ On the Front End dependencies include:
 - react-materialize
 - react-router-dom
 - react-scripts
-
-On the Back End Dependencies include:
 
 ## Getting Started
 
@@ -64,12 +56,6 @@ That should kick off a new tab in your browser connecting you to the development
 
 You will need to connect it to a backend. For details on our backend, take a look at [its repository](https://github.com/pnblake/emergency-recipe-back).
 
-## Deployment
-
-<!-- Add additional notes about how to deploy this on a live system -->
-
-TK
-
 ## Built With
 
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces
@@ -83,18 +69,13 @@ TK
 
 ## Authors
 
-- **Liz Davidson** - _Back End & Authentication _ - [GitHub](<[https://github.com/PurpleBooth](https://github.com/ldavidson45)>)
+- **Liz Davidson** - _Back End & Authentication _ - [GitHub](<(https://github.com/ldavidson45)>)
 - **Yoshi Maisami** - _Back End & Senior Dev Outreach_ - [GitHub](https://github.com/yoshimaisami)
 - **Jasmin Vargas** - _Front End & Forms_ - [GitHub](https://github.com/jasvr)
 - **Paul Blake** - _Front End & Design_ - [Portfolio](https://pnblake.com) - [GitHub](https://github.com/pnblake)
 
-## License
-
-TK
-
 ## Acknowledgments
 
-- H/T to Tom Pawlak and his blog for his method of tokenizing strings in Javascript, which helped build our ingredients tags. [Read more here.](https://blog.abelotech.com/posts/split-string-into-tokens-javascript/)
-- H/T to 'Surreal Dreams' on StackOverflow for inspiring our delayed search with his JQuery-esque answer on [this thread](https://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up).
 - H/T to Changhui Xu and his [blog post on removing duplicate objects from an array](https://codeburst.io/javascript-array-distinct-5edc93501dc4).
-- H/T to Michelle Barker's [CodePen](https://codepen.io/michellebarker/pen/zvxpoG) that helped with the column wrap recipe list.
+- H/T to Mikey Stecky-Efantis and his [blog post on using JWT web tokens to authenticate users] (https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec).
+- H/T to Dudley Storey's [Codepen] (https://codepen.io/dudleystorey/pen/yqrhw) used to inspire the recipe cards layout. 
