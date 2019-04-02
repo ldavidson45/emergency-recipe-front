@@ -33,7 +33,7 @@ class RecipePageView extends Component {
     const recipe = this.state.recipe;
     return (
       <main className="recipe-container">
-        <h1>{recipe.title}</h1>
+        <h1 className="recipe-title">{recipe.title}</h1>
         <section className="image-ingredients-container">
           <RecipeImage {...recipe} />
           <IngredientsList {...recipe} />

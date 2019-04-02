@@ -40,7 +40,11 @@
   margin: 0;
 }
 
-.recipe-title {
+.recipe-card-title {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+}
+
+.recipe-title {
+  font-family: "Nothing You Could Do", cursive;
 }
