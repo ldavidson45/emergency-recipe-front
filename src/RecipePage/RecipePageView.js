@@ -40,7 +40,7 @@ class RecipePageView extends Component {
         </section>
         <RecipeDirections {...recipe} />
         <CommentInput refreshData={this.refreshData} {...recipe} />
-        <CommentList {...recipe} />
+        <CommentList refreshData={this.refreshData} {...recipe} />
       </main>
     );
   }

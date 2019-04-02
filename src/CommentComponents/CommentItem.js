@@ -1,30 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Comment.css";
-import { Icon, Button } from "react-materialize";
+import { Icon } from "react-materialize";
+import axios from "axios";
+const rootAPI = "https://emergency-recipe.herokuapp.com/";
 
-function CommentItem(comment) {
-  let deleteIcon;
-  if (comment.name === localStorage.username) {
-    deleteIcon = (
-      <button className="delete-comment-icon">
-        <Icon tiny>delete</Icon>
-      </button>
-    );
-  } else {
-    deleteIcon = <p />;
+class CommentItem extends Component {
+  constructor(props) {
+    super(props);
+    this.handleDeleteComment = this.handleDeleteComment.bind(this);
   }
-  return (
-    <div key={comment._id}>
-      <div className="comment-item-container">
-        <Icon className="user-icon" tiny>
-          perm_identity
-        </Icon>
-        <span className="comment-author">{comment.name}</span>
-        {comment.content}
-        {deleteIcon}
+
+  handleDeleteComment(event) {
+    event.preventDefault();
+    axios.delete(`${rootAPI}api/comment/${this.props._id}`).then(res => {
+      this.props.refreshData();
+    });
+  }
+
+  render() {
+    let deleteIcon;
+    if (this.props.name === localStorage.username) {
+      deleteIcon = (
+        <button
+          onClick={this.handleDeleteComment}
+          className="delete-comment-icon"
+        >
+          <Icon tiny>delete</Icon>
+        </button>
+      );
+    } else {
+      deleteIcon = <p />;
+    }
+    return (
+      <div key={this.props._id}>
+        <div className="comment-item-container">
+          <Icon className="user-icon" tiny>
+            perm_identity
+          </Icon>
+          <span className="comment-author">{this.props.name}</span>
+          {this.props.content}
+          {deleteIcon}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default CommentItem;
