@@ -4,6 +4,8 @@ Emergency Recipe (Front End)
 
 Emergency Recipe flips recipe search on it's head – allowing users to search for recipes by the ingredients they already have in hand.
 
+View the Back End [here](https://github.com/ldavidson45/emergency-recipe-back).
+
 ## List of Features
 
 Users can:
