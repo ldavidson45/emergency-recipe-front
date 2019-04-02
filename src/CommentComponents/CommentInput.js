@@ -13,12 +13,23 @@ class CommentInput extends Component {
       content: ""
     };
     this.addComment = this.addComment.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   addComment(event) {
+    console.log(this.state);
     event.preventDefault();
-    axios.post(`${rootAPI}api/comment/recipe/${this.props._id}`).then(res => {
-      this.props.refreshData();
+    axios
+      .post(`${rootAPI}api/comment/recipe/${this.props._id}`, this.state)
+      .then(res => {
+        this.props.refreshData();
+      });
+  }
+
+  handleInputChange(event) {
+    event.preventDefault();
+    this.setState({
+      content: event.target.value
     });
   }
 
@@ -31,6 +42,7 @@ class CommentInput extends Component {
         <textarea
           className="comment-input-field"
           placeholder="Leave a comment..."
+          onChange={this.handleInputChange}
         />
         <Button onClick={this.addComment} type="submit" waves="light">
           Submit
