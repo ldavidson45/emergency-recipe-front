@@ -5,7 +5,9 @@ function IngredientsList(recipe) {
   let ingredientsArray = [];
   if (recipe.keyIngredients) {
     ingredientsArray = recipe.keyIngredients.map(ingredient => {
-      return <Chip key={ingredient}>{ingredient}</Chip>;
+      let key = Math.random() + ingredient;
+
+      return <Chip key={key}>{ingredient}</Chip>;
     });
   } else {
     return <div />;
