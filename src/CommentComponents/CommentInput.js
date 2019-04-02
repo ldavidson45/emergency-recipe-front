@@ -19,11 +19,15 @@ class CommentInput extends Component {
   addComment(event) {
     console.log(this.state);
     event.preventDefault();
-    axios
-      .post(`${rootAPI}api/comment/recipe/${this.props._id}`, this.state)
-      .then(res => {
-        this.props.refreshData();
-      });
+    if (localStorage.username) {
+      axios
+        .post(`${rootAPI}api/comment/recipe/${this.props._id}`, this.state)
+        .then(res => {
+          this.props.refreshData();
+        });
+    } else {
+      alert("Please log in");
+    }
   }
 
   handleInputChange(event) {
