@@ -47,4 +47,11 @@
 
 .recipe-title {
   font-family: "Nothing You Could Do", cursive;
+  text-align: center;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  margin-top: 10px;
 }

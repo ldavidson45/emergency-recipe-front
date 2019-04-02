@@ -2,7 +2,6 @@ import React from "react";
 import CommentItem from "./CommentItem";
 
 function CommentList(recipe) {
-  console.log(recipe);
   const commentsArray = recipe.comments;
   let commentItems = [];
   if (commentsArray) {

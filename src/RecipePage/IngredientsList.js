@@ -1,13 +1,20 @@
 import React from "react";
+import { Chip } from "react-materialize";
 
 function IngredientsList(recipe) {
+  let ingredientsArray = [];
+  if (recipe.keyIngredients) {
+    ingredientsArray = recipe.keyIngredients.map(ingredient => {
+      return <Chip key={ingredient}>{ingredient}</Chip>;
+    });
+  } else {
+    return <div />;
+  }
+
   return (
     <div className="recipe-container">
       <h4 className="recipe-section-heading">Ingredients</h4>
-      <ul>
-        <li>Ingredient 1</li>
-        <li>Ingredient 2</li>
-      </ul>
+      <div className="ingredients-grid">{ingredientsArray}</div>
     </div>
   );
 }

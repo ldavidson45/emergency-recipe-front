@@ -29,15 +29,13 @@ class RecipePageView extends Component {
   }
 
   render() {
-    console.log(this.props);
     const recipe = this.state.recipe;
     return (
       <main className="recipe-container">
         <h1 className="recipe-title">{recipe.title}</h1>
-        <section className="image-ingredients-container">
-          <RecipeImage {...recipe} />
-          <IngredientsList {...recipe} />
-        </section>
+        <RecipeImage {...recipe} />
+
+        <IngredientsList {...recipe} />
         <RecipeDirections {...recipe} />
         <CommentInput refreshData={this.refreshData} {...recipe} />
         <CommentList refreshData={this.refreshData} {...recipe} />
