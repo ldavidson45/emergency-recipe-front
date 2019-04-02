@@ -79,5 +79,4 @@ TK
 ## Acknowledgments
 
 - H/T to Changhui Xu and his [blog post on removing duplicate objects from an array](https://codeburst.io/javascript-array-distinct-5edc93501dc4).
-- H/T to Mikey Stecky-Efantis and his [blog post on using JWT web tokens to authenticate users] (https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec).
 - H/T to Dudley Storey's [Codepen] (https://codepen.io/dudleystorey/pen/yqrhw) used to inspire the recipe cards layout. 
