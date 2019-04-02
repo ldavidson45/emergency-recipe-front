@@ -18,6 +18,10 @@ class RecipePageView extends Component {
     this.refreshData = this.refreshData.bind(this);
   }
 
+  componentDidMount() {
+    this.refreshData();
+  }
+
   refreshData() {
     axios.get(`${rootAPI}api/recipe/${this.state.id}`).then(res => {
       this.setState({ recipe: res.data });

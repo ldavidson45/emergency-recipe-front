@@ -6,7 +6,7 @@ function CommentList(recipe) {
   let commentItems = [];
   if (commentsArray) {
     commentItems = commentsArray.map(comment => {
-      return <CommentItem {...comment} />;
+      return <CommentItem key={comment._id} {...comment} />;
     });
   }
 
