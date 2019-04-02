@@ -6,7 +6,6 @@ Emergency Recipe flips recipe search on it's head – allowing users to search f
 
 # Problem:
 
-
 # Solution:
 
 ## List of Features
@@ -98,3 +97,4 @@ TK
 - H/T to Tom Pawlak and his blog for his method of tokenizing strings in Javascript, which helped build our ingredients tags. [Read more here.](https://blog.abelotech.com/posts/split-string-into-tokens-javascript/)
 - H/T to 'Surreal Dreams' on StackOverflow for inspiring our delayed search with his JQuery-esque answer on [this thread](https://stackoverflow.com/questions/4220126/run-javascript-function-when-user-finishes-typing-instead-of-on-key-up).
 - H/T to Changhui Xu and his [blog post on removing duplicate objects from an array](https://codeburst.io/javascript-array-distinct-5edc93501dc4).
+- H/T to Michelle Barker's [CodePen](https://codepen.io/michellebarker/pen/zvxpoG) that helped with the column wrap recipe list.

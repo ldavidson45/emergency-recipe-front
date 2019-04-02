@@ -1,0 +1,36 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  background: #fb9039;
+  padding: 25px;
+  width: 500px;
+  margin: 50px auto;
+  box-shadow: 2px 4px 10px #888888;
+}
+
+.login-button {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  background: white;
+  color: #fb9039;
+}
+
+.login-button:focus {
+  background: white;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+label {
+  font-size: 14px;
+  color: black;
+  margin-left: 25px;
+}

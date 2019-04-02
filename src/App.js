@@ -1,28 +1,23 @@
 import React, { Component } from "react";
-import { Route, Switch, Link } from "react-router-dom";
-import Home from "./Home";
-import Title from "./Title.js";
-import { Container } from "react-materialize";
-import "./App.css";
-import RecipeView from "./RecipeView/RecipeView.js";
-import RecipeFormView from "./RecipeFormView";
-import Auth from "./Auth";
+import { Route, Switch } from "react-router-dom";
+import RecipePageView from "./RecipePage/RecipePageView";
+import Home from "./Home/Home.js";
+import NavBar from "./NavBar/NavBar";
+import LoginPage from "./Login_Signup/LoginPage";
 import axios from "axios";
-import UpdateFormContainer from "./UpdateFormContainer";
+
+const rootAPI = "https://emergency-recipe.herokuapp.com/";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      password: "",
       isLoggedIn: false
     };
-    this.handleAuthInput = this.handleAuthInput.bind(this);
-    this.handleSignUp = this.handleSignUp.bind(this);
-    this.handleLogIn = this.handleLogIn.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
-
   componentDidMount() {
     if (localStorage.token) {
       this.setState({
@@ -35,92 +30,67 @@ class App extends Component {
     }
   }
 
-  handleAuthInput(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-  handleSignUp(e) {
-    e.preventDefault();
+  handleLogin(event, un, pw) {
+    event.preventDefault();
     axios
-      .post("https://emergency-recipe-backend.herokuapp.com/users/signup", {
-        username: this.state.username,
-        password: this.state.password
+      .post(rootAPI + "users/login", {
+        username: un,
+        password: pw
       })
-      .then(response => {
-        localStorage.token = response.data.token;
-        this.setState({ isLoggedIn: true });
+      .then(res => {
+        localStorage.token = res.data.token;
+        this.setState({
+          isLoggedIn: true,
+          username: un
+        });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
+    console.log(this.props);
+    console.log("login");
   }
 
-  handleLogIn(e) {
-    e.preventDefault();
+  handleSignup(event, un, pw) {
+    event.preventDefault();
     axios
-      .post("https://emergency-recipe-backend.herokuapp.com/users/login", {
-        username: this.state.username,
-        password: this.state.password
+      .post(rootAPI + "users/signup", {
+        username: un,
+        password: pw
       })
-      .then(response => {
-        localStorage.token = response.data.token;
-        this.setState({ isLoggedIn: true });
-        this.setState({ password: "" });
+      .then(res => {
+        localStorage.token = res.data.token;
+        this.setState({
+          isLoggedIn: true,
+          username: un
+        });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   }
-
   render() {
     return (
-      <div className="App">
-        <Container>
-          <main>
-            <div className="title">
-              <Link to="/">
-                <Title />
-              </Link>
-            </div>
-
-            <div className="link-box">
-              <Link to="/new-recipe" className="link-box-link">
-                Submit a Recipe
-              </Link>
-              <span>&nbsp;|&nbsp;</span>
-              <Link to="/auth" className="link-box-link">
-                Auth
-              </Link>
-            </div>
-
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route
-                path="/recipe/update/:id"
-                component={UpdateFormContainer}
-              />
-              <Route
-                path="/recipe/:id"
-                render={props => {
-                  return <RecipeView {...this.state} {...props} />;
-                }}
-              />
-              <Route path="/new-recipe" component={RecipeFormView} />
-              <Route
-                path="/auth"
-                render={props => {
-                  return (
-                    <Auth
-                      handleSignUp={this.handleSignUp}
-                      handleLogIn={this.handleLogIn}
-                      handleAuthInput={this.handleAuthInput}
-                      {...props}
-                      {...this.state}
-                    />
-                  );
-                }}
-              />
-            </Switch>
-          </main>
-        </Container>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route
+            path="/recipe/:id"
+            render={props => {
+              return <RecipePageView {...props} />;
+            }}
+          />
+          <Route
+            path="/login"
+            render={props => {
+              return (
+                <LoginPage
+                  {...this.state}
+                  {...props}
+                  handleLogin={this.handleLogin}
+                  handleSignup={this.handleSignup}
+                />
+              );
+            }}
+          />
+        </Switch>
       </div>
     );
   }
