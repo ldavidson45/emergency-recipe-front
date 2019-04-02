@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import "./SearchBar.css";
 import SearchChips from "./SearchChips";
-import { Button } from "react-materialize";
 
 const searchBarStyle = {
   border: "solid 1px black",
   borderRadius: "10px",
   padding: "0 10px"
-};
-
-const buttonStyle = {
-  borderRadius: "50%",
-  height: "30px",
-  width: "30px",
-  margin: " 0 0 20px 10px",
-  background: "#fb9039"
 };
 
 class SearchBar extends Component {

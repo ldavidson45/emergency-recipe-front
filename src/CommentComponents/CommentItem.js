@@ -1,6 +1,6 @@
 import React from "react";
 import "./Comment.css";
-import { Icon, Button } from "react-materialize";
+import { Icon } from "react-materialize";
 
 function CommentItem(comment) {
   return (
