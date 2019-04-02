@@ -21,7 +21,7 @@ class LoginButton extends Component {
         name="log-in"
         className="login-button"
       >
-        Log In
+        LOG IN
       </button>
     );
   }

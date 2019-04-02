@@ -17,8 +17,11 @@
   display: block;
   font-size: 16px;
   padding: 10px;
-  background: white;
-  color: #fb9039;
+  background: #1f3044;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 20px;
+  border: none;
 }
 
 .login-button:focus {
@@ -31,6 +34,6 @@
 
 label {
   font-size: 14px;
-  color: black;
+  color: #1f3044;
   margin-left: 25px;
 }

@@ -17,11 +17,6 @@ const inputStyle = {
   shadowOffset: "none"
 };
 
-const titleStyle = {
-  margin: "25px 25px 50px 25px",
-  color: "white"
-};
-
 class LoginPage extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +35,7 @@ class LoginPage extends Component {
     return (
       <div className="login-container">
         <form className="login-form">
-          <h4 style={titleStyle}>Emergency Recipe</h4>
+          <h4 className="home-title">Emergency Recipe</h4>
           <label>
             USERNAME
             <input

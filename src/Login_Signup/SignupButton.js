@@ -19,7 +19,7 @@ class SignupButton extends Component {
         name="log-in"
         className="login-button"
       >
-        Sign Up
+        SIGN UP
       </button>
     );
   }
