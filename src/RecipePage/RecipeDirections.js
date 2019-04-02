@@ -4,7 +4,7 @@ function RecipeDirections(recipe) {
   return (
     <section className="recipe-container">
       <h4 className="recipe-section-heading">Directions</h4>
-      <p>These are the directions</p>
+      <p>{recipe.instructions}</p>
     </section>
   );
 }
