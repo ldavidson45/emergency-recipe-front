@@ -3,3 +3,9 @@
   text-align: center;
   color: #1f3044;
 }
+
+.sub-text {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}

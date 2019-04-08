@@ -29,7 +29,7 @@ class Home extends Component {
     return (
       <main>
         <h1 className="home-title">Emergency Recipe</h1>
-        <p>
+        <p className="sub-text">
           Note: the backend server is hosted on a free version of Heroku. To
           wake the server up, run a search then refresh the page.
         </p>
