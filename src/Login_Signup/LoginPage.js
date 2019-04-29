@@ -4,7 +4,7 @@ import LoginButton from "./LoginButton";
 import SignupButton from "./SignupButton";
 
 const inputStyle = {
-  border: "solid 1px white",
+  border: "solid 1px #1f3044",
   borderRadius: "25px",
   width: "90%",
   padding: "5px 15px",
