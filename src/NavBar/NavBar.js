@@ -7,8 +7,8 @@ class NavBar extends Component {
   render() {
     return (
       <div className="nav-bar">
-        <Link to="/" className="home-icon">
-          <Icon>home</Icon>
+        <Link to="/">
+          <h1 className="title">Emergency Recipe</h1>
         </Link>
         <Link className="nav-link" to="/login">
           <span>Log In / Sign Up</span>

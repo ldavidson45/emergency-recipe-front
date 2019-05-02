@@ -5,6 +5,7 @@ import Home from "./Home/Home.js";
 import NavBar from "./NavBar/NavBar";
 import LoginPage from "./Login_Signup/LoginPage";
 import axios from "axios";
+import "./App.css";
 
 const rootAPI = "https://emergency-recipe.herokuapp.com/";
 
