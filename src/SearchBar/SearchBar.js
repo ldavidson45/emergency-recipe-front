@@ -3,9 +3,11 @@ import "./SearchBar.css";
 import SearchChips from "./SearchChips";
 
 const searchBarStyle = {
-  border: "solid 1px black",
-  borderRadius: "10px",
-  padding: "0 10px"
+  border: "solid .05rem black",
+  borderRadius: "2rem",
+  padding: "0 2rem",
+  background: "#9beed9",
+  width: "90%"
 };
 
 class SearchBar extends Component {
@@ -49,18 +51,18 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-container">
-        <p className="search-title">Search By Ingredients</p>
+      <section className="search-container">
         <SearchChips {...this.state} handleDelete={this.handleDelete} />
-        <div className="search-form">
+        <form className="search-form">
+          <p className="search-title">Type an ingredient and press "enter"</p>
           <input
             onChange={this.handleInputChange}
             onKeyDown={this.handleSubmit}
             className="search-input"
             style={searchBarStyle}
           />
-        </div>
-      </div>
+        </form>
+      </section>
     );
   }
 }

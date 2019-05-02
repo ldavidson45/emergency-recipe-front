@@ -1,13 +1,16 @@
 .search-container {
-  max-width: 500px;
   margin: auto;
+  width: 90%;
 }
 
 .search-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 50rem;
+  margin: 0 auto;
 }
 
 .search-title {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
 }
