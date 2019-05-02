@@ -1,11 +1,20 @@
-.home-title {
-  font-family: "Nothing You Could Do", cursive;
-  text-align: center;
-  color: #1f3044;
+.home-details-container {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #ffca06;
+  font-family: "Quicksand", sans-serif;
 }
 
-.sub-text {
+.section-heading {
   text-align: center;
-  font-size: 12px;
-  font-style: italic;
+  display: block;
+}
+
+.emphasis-text {
+  color: #1b998b;
+  text-align: center;
+}
+
+.bold-title {
+  font-weight: bold;
 }

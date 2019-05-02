@@ -28,11 +28,22 @@ class Home extends Component {
   render() {
     return (
       <main>
-        <h1 className="home-title">Emergency Recipe</h1>
-        <p className="sub-text">
-          Note: the backend server is hosted on a free version of Heroku. To
-          wake the server up, run a search then refresh the page.
-        </p>
+        <section className="home-details-container">
+          <h3 className="bold-title">Reverse engineer your recipe search.</h3>
+          <h5>
+            Gone are the days of throwing away ingredients that you don't have
+            any use for. Emergency Recipe can help you create meals using items
+            you already have.{" "}
+          </h5>
+          <h5 className="emphasis-text">
+            Type your ingredients in the search bar and see all of the
+            possibilities!
+          </h5>
+          <p className="sub-text">
+            Note: the backend server is hosted on a free version of Heroku. To
+            wake the server up, run a search then refresh the page.
+          </p>
+        </section>
         <SearchBar handleSearch={this.handleSearch} />
         <RecipeList {...this.state} />
       </main>
