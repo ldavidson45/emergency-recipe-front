@@ -1,19 +1,38 @@
 .nav-bar {
-  height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  box-shadow: none;
+  height: auto;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
 .nav-link {
   color: white;
-  margin: 0 5px 0 auto;
   text-align: right;
   font-size: 18px;
   line-height: 50px;
-  margin: 0px 15px;
+  margin: 0 2rem 0 auto;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  display: block;
 }
 
 .title {
   color: black;
   font-family: "Bungee Shade", cursive;
+}
+
+@media screen and (max-width: 770px) {
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 0 auto;
+  }
 }

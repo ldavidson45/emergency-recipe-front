@@ -6,14 +6,14 @@ import { Icon } from "react-materialize";
 class NavBar extends Component {
   render() {
     return (
-      <div className="nav-bar">
+      <nav className="nav-bar">
         <Link to="/">
           <h1 className="title">Emergency Recipe</h1>
         </Link>
         <Link className="nav-link" to="/login">
           <span>Log In / Sign Up</span>
         </Link>
-      </div>
+      </nav>
     );
   }
 }
