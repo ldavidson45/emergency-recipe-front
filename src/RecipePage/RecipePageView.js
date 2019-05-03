@@ -31,12 +31,15 @@ class RecipePageView extends Component {
   render() {
     const recipe = this.state.recipe;
     return (
-      <main className="recipe-container">
-        <h1 className="recipe-title">{recipe.title}</h1>
-        <RecipeImage {...recipe} />
-
-        <IngredientsList {...recipe} />
-        <RecipeDirections {...recipe} />
+      <main className="recipe-page">
+        <section className="recipe-page-heading">
+          <h3 className="recipe-title">{recipe.title}</h3>
+          <RecipeImage {...recipe} />
+        </section>
+        <section className="recipe-page-content">
+          <IngredientsList {...recipe} />
+          <RecipeDirections {...recipe} />
+        </section>
         <CommentInput refreshData={this.refreshData} {...recipe} />
         <CommentList refreshData={this.refreshData} {...recipe} />
       </main>

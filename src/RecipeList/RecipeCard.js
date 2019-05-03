@@ -15,8 +15,9 @@ function RecipeCard(recipe) {
         </article>
       }
     >
-      <p>{recipe.instructions}</p>
+      <p className="directions-text">{recipe.instructions}</p>
       <Link
+        className="button__view-recipe"
         to={{
           pathname: `/recipe/${recipe._id}`,
           state: { recipe }

@@ -14,7 +14,7 @@ function IngredientsList(recipe) {
   }
 
   return (
-    <div className="recipe-container">
+    <div className="ingredients-container">
       <h4 className="recipe-section-heading">Ingredients</h4>
       <div className="ingredients-grid">{ingredientsArray}</div>
     </div>
