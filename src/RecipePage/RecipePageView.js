@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import RecipeImage from "../RecipeList/RecipeImage";
 import CommentList from "../CommentComponents/CommentList";
 import CommentInput from "../CommentComponents/CommentInput";
 import IngredientsList from "./IngredientsList";
