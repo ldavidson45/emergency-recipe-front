@@ -33,8 +33,13 @@ class RecipePageView extends Component {
     return (
       <div className="recipe-page">
         <section className="recipe-page-heading">
+          <img
+            className="recipe-image-large"
+            src={recipe.picture}
+            alt={recipe.title}
+          />
+          {/* <RecipeImage {...recipe} /> */}
           <h3 className="recipe-title">{recipe.title}</h3>
-          <RecipeImage {...recipe} />
         </section>
         <section className="recipe-page-content">
           <IngredientsList {...recipe} />
