@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { Icon } from "react-materialize";
 
 class NavBar extends Component {
   render() {

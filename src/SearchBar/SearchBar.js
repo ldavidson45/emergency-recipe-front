@@ -25,7 +25,6 @@ class SearchBar extends Component {
 
   handleInputChange(event) {
     event.preventDefault();
-    console.log(event.target.value);
     this.setState({
       ingredient: event.target.value
     });

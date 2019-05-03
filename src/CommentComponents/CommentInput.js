@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Button } from "react-materialize";
+import { Icon } from "react-materialize";
 import "./Comment.css";
 import axios from "axios";
 
