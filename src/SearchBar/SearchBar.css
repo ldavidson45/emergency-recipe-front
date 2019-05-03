@@ -14,3 +14,8 @@
   font-family: "Quicksand", sans-serif;
   font-weight: bolder;
 }
+
+.chip {
+  background: #9beed9;
+  box-shadow: 0 0.3rem 0.5rem #014030;
+}

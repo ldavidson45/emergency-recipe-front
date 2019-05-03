@@ -8,7 +8,7 @@ class RecipeList extends Component {
       return <RecipeCard key={recipe._id} {...recipe} />;
     });
 
-    return <div className="recipe-list">{recipelist}</div>;
+    return <section className="recipe-list">{recipelist}</section>;
   }
 }
 
