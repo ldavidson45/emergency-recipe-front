@@ -5,24 +5,32 @@
 
 .login-form {
   padding: 25px;
-  width: 500px;
   margin: 50px auto;
   border: black solid 0.1rem;
   background: #ffca06;
   font-family: "Quicksand", sans-serif;
 }
 
+.login-title {
+  margin-bottom: 4rem;
+}
+
 .login-button {
-  width: 80%;
-  margin: 20px auto;
+  width: 50%;
+  font-size: 1.5rem;
+  background: #06d6a0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  color: black;
   display: block;
-  font-size: 16px;
-  padding: 10px;
-  background: #1f3044;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 20px;
-  border: none;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  border-radius: 20rem;
+}
+
+.login-button:hover {
+  background: #1fffc3;
+  cursor: pointer;
 }
 
 .login-button:focus {

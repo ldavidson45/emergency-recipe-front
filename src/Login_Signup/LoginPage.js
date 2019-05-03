@@ -6,10 +6,10 @@ import SignupButton from "./SignupButton";
 const inputStyle = {
   border: "solid 1px #1f3044",
   borderRadius: "2rem",
-  width: "50%",
+  width: "70%",
   padding: "0 1rem",
   display: "block",
-  marginLeft: "1rem",
+  margin: "0 auto 1rem auto",
   color: "black",
   fontSize: "1rem",
   fontFamily: "'Quicksand', sans-serif",
@@ -35,7 +35,7 @@ class LoginPage extends Component {
     return (
       <div className="login-container">
         <form className="login-form">
-          <h4 className="home-title">Emergency Recipe</h4>
+          <h4 className="login-title">Log In Or Sign Up</h4>
           <label>
             USERNAME
             <input
