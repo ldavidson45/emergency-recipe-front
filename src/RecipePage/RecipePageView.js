@@ -31,7 +31,7 @@ class RecipePageView extends Component {
   render() {
     const recipe = this.state.recipe;
     return (
-      <main className="recipe-page">
+      <div className="recipe-page">
         <section className="recipe-page-heading">
           <h3 className="recipe-title">{recipe.title}</h3>
           <RecipeImage {...recipe} />
@@ -45,7 +45,7 @@ class RecipePageView extends Component {
           <CommentInput refreshData={this.refreshData} {...recipe} />
           <CommentList refreshData={this.refreshData} {...recipe} />
         </section>
-      </main>
+      </div>
     );
   }
 }
