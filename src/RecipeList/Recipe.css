@@ -20,6 +20,11 @@
   text-align: center;
 }
 
+.recipe-section-heading {
+  font-family: "Kalam", cursive;
+  text-align: center;
+}
+
 .recipe-thumbnail {
   max-height: 200px;
   width: auto;
@@ -63,6 +68,7 @@
   flex-flow: row-wrap;
   background-image: url("../images/notebookpage.svg");
   background-size: cover;
+  padding: 3.5rem 2rem 0 2rem;
 }
 
 .recipe-page-content {
@@ -70,6 +76,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
   background: #f9f8d1;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .recipe-title {
