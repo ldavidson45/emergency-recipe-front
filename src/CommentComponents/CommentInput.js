@@ -48,9 +48,14 @@ class CommentInput extends Component {
           placeholder="Leave a comment..."
           onChange={this.handleInputChange}
         />
-        <Button onClick={this.addComment} type="submit" waves="light">
+        <button
+          className="comment-submit-button"
+          onClick={this.addComment}
+          type="submit"
+          waves="light"
+        >
           Submit
-        </Button>
+        </button>
       </div>
     );
   }

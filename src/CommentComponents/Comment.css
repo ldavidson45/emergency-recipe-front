@@ -1,3 +1,11 @@
+.comments-container {
+  margin: 0;
+}
+
+.comment-section-title {
+  font-family: "Quicksand", sans-serif;
+}
+
 .comment-input-container {
   display: flex;
   flex-direction: row;
@@ -11,11 +19,25 @@
   height: 50px;
   border-radius: 10px;
   margin: 10px;
+  background: white;
+}
+
+.comment-submit-button {
+  background: black;
+  font-family: "Quicksand", sans-serif;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.comment-submit-button:hover {
+  background: #ffca06;
 }
 
 .user-icon {
+  background: black;
   color: white;
-  background: gray;
   border-radius: 50px;
   padding: 10px;
 }

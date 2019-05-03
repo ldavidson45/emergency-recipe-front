@@ -40,8 +40,11 @@ class RecipePageView extends Component {
           <IngredientsList {...recipe} />
           <RecipeDirections {...recipe} />
         </section>
-        <CommentInput refreshData={this.refreshData} {...recipe} />
-        <CommentList refreshData={this.refreshData} {...recipe} />
+        <section className="comments-container">
+          <h3 className="comment-section-title">Comments</h3>
+          <CommentInput refreshData={this.refreshData} {...recipe} />
+          <CommentList refreshData={this.refreshData} {...recipe} />
+        </section>
       </main>
     );
   }
