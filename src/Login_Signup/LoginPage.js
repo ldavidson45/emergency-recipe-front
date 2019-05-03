@@ -5,15 +5,15 @@ import SignupButton from "./SignupButton";
 
 const inputStyle = {
   border: "solid 1px #1f3044",
-  borderRadius: "25px",
-  width: "90%",
-  padding: "5px 15px",
+  borderRadius: "2rem",
+  width: "50%",
+  padding: "0 1rem",
   display: "block",
-  margin: "10px auto 30px auto",
+  marginLeft: "1rem",
   color: "black",
-  fontSize: "16px",
-  fontFamily: "'Poppins', sans-serif",
-  background: "transparent",
+  fontSize: "1rem",
+  fontFamily: "'Quicksand', sans-serif",
+  background: "white",
   shadowOffset: "none"
 };
 
