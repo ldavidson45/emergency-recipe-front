@@ -39,23 +39,26 @@ class CommentInput extends Component {
 
   render() {
     return (
-      <div className="comment-input-container">
-        <Icon className="user-icon" small>
-          perm_identity
-        </Icon>
-        <textarea
-          className="comment-input-field"
-          placeholder="Leave a comment..."
-          onChange={this.handleInputChange}
-        />
-        <button
-          className="comment-submit-button"
-          onClick={this.addComment}
-          type="submit"
-          waves="light"
-        >
-          Submit
-        </button>
+      <div>
+        <h5 className="comment-input-label">Leave a comment</h5>
+        <div className="comment-input-container">
+          <Icon className="user-icon" small>
+            perm_identity
+          </Icon>
+          <textarea
+            className="comment-input-field"
+            placeholder="Leave a comment..."
+            onChange={this.handleInputChange}
+          />
+          <button
+            className="comment-submit-button"
+            onClick={this.addComment}
+            type="submit"
+            waves="light"
+          >
+            Submit
+          </button>
+        </div>
       </div>
     );
   }

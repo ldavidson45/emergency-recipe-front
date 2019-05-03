@@ -22,6 +22,13 @@
   background: white;
 }
 
+.comment-input-label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
 .comment-submit-button {
   background: black;
   font-family: "Quicksand", sans-serif;
