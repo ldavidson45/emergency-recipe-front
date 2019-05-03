@@ -1,8 +1,23 @@
 .recipe-card {
   box-shadow: 2px 4px 10px #888888;
-  margin: 10px;
-  padding: 10px;
   position: inherit;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  flex-basis: flex-end;
+}
+
+.recipe-card-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin: 0;
+  bottom: 0;
+  min-height: 20%;
+  text-align: center;
 }
 
 .recipe-thumbnail {
@@ -39,13 +54,8 @@
   margin: 0;
 }
 
-.recipe-card-title {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-
 .recipe-title {
-  font-family: "Nothing You Could Do", cursive;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
 }
 

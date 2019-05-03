@@ -10,9 +10,8 @@ function RecipeCard(recipe) {
       header={recipe.title}
       trigger={
         <article className="recipe-card">
-          <h5 className="recipe-card-title">{recipe.title}</h5>
-
           <RecipeImage {...recipe} />
+          <h5 className="recipe-card-title">{recipe.title}</h5>
         </article>
       }
     >
