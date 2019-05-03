@@ -7,8 +7,18 @@ function IngredientsList(recipe) {
     ingredientsArray = recipe.keyIngredients.map(ingredient => {
       let key = Math.random() + ingredient;
 
-      return <Chip key={key}>{ingredient}</Chip>;
+      return (
+        <li className="ingredient-item" key={key}>
+          - {ingredient}
+        </li>
+      );
     });
+    return (
+      <div>
+        <h4 className="recipe-section-heading">Ingredients</h4>
+        <ul className="ingredients-list">{ingredientsArray}</ul>
+      </div>
+    );
   } else {
     return <div />;
   }
