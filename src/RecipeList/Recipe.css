@@ -73,8 +73,7 @@
   flex-direction: column;
   background-image: url("../images/notebookpage.svg");
   background-size: cover;
-  padding: 5rem 2rem;
-  border-bottom: #06d6a0 dashed 0.5rem;
+  padding: 5rem 2rem 0 2rem;
 }
 
 .recipe-page-content {
@@ -89,6 +88,8 @@
 .recipe-title {
   text-align: center;
   font-family: "Kalam", cursive;
+  border-bottom: #06d6a0 dashed 0.3rem;
+  padding-bottom: 1rem;
 }
 
 .directions-container {
